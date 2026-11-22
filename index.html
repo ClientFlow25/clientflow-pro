@@ -6,7 +6,7 @@
 <title>ClientFlow Pro — Automatisation sur mesure pour PME</title>
 <meta name="description" content="J'automatise la gestion de vos clients, stocks et rendez-vous — au Maroc et en France.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
     --paper: #FAF9F5;
@@ -28,7 +28,6 @@
     --radius-l: 22px;
     --disp: 'Space Grotesk', sans-serif;
     --body: 'Inter', sans-serif;
-    --mono: 'IBM Plex Mono', monospace;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -46,7 +45,7 @@
   /* ---- eyebrow / pill system (signature element) ---- */
   .pill{
     display:inline-flex; align-items:center; gap:7px;
-    font-family:var(--mono); font-size:12.5px; letter-spacing:0.02em;
+    font-family:var(--body); font-size:12.5px; font-weight:500;
     padding:5px 12px 5px 9px; border-radius:999px; border:1px solid var(--line);
     background:var(--paper-2); color:var(--ink-soft);
   }
@@ -66,12 +65,12 @@
     backdrop-filter:blur(8px); border-bottom:1px solid var(--line);
   }
   .nav{display:flex; align-items:center; justify-content:space-between; padding:16px 24px; max-width:1120px; margin:0 auto;}
-  .brand{font-family:var(--disp); font-weight:600; font-size:18px; display:flex; align-items:center; gap:8px;}
-  .brand .mark{width:9px; height:9px; border-radius:2px; background:var(--teal); transform:rotate(45deg); flex:none;}
+  .nav .brand{font-family:var(--disp); font-weight:600; font-size:18px; display:flex; align-items:center; gap:8px;}
+  .nav .brand .mark{width:9px; height:9px; border-radius:2px; background:var(--teal); transform:rotate(45deg); flex:none;}
   .nav-links{display:flex; gap:28px; font-size:14px; color:var(--ink-soft);}
   .nav-links a:hover{color:var(--ink);}
   .nav-cta{background:var(--ink); color:var(--paper); padding:9px 18px; border-radius:var(--radius-s); font-size:13.5px; font-weight:500; white-space:nowrap;}
-  .lang{display:flex; gap:10px; font-size:12.5px; color:var(--ink-soft); font-family:var(--mono);}
+  .lang{display:flex; gap:10px; font-size:12.5px; color:var(--ink-soft); font-family:var(--body);}
   @media (max-width:860px){ .nav-links{display:none;} }
 
   /* ---- hero ---- */
@@ -95,8 +94,9 @@
     background:#fff; border:1px solid var(--line); border-radius:var(--radius-l);
     padding:22px; box-shadow:0 1px 0 rgba(28,35,33,0.03);
   }
-  .board-head{display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;}
-  .board-head span{font-family:var(--mono); font-size:12px; color:var(--ink-soft);}
+  .board-head{display:flex; justify-content:space-between; align-items:flex-start; gap:12px; margin-bottom:16px;}
+  .board-head span:last-child{flex:none; white-space:nowrap;}
+  .board-head span{font-family:var(--body); font-size:12px; color:var(--ink-soft);}
   .board-rows{display:flex; flex-direction:column; gap:8px;}
   .board-row{
     display:flex; justify-content:space-between; align-items:center;
@@ -107,7 +107,7 @@
   .board-stats{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:14px;}
   .stat{border:1px solid var(--line); border-radius:var(--radius-s); padding:11px 12px;}
   .stat .n{font-family:var(--disp); font-size:22px; font-weight:600;}
-  .stat .l{font-size:11.5px; color:var(--ink-soft); font-family:var(--mono);}
+  .stat .l{font-size:11.5px; color:var(--ink-soft); font-family:var(--body);}
   @media (prefers-reduced-motion:no-preference){
     .pulse .dot{animation:pulse 2.4s ease-in-out infinite;}
   }
@@ -122,7 +122,7 @@
   .cards3{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
   @media (max-width:800px){ .cards3{grid-template-columns:1fr;} }
   .card{background:#fff; border:1px solid var(--line); border-radius:var(--radius-m); padding:26px;}
-  .card .icon{font-family:var(--mono); font-size:12px; color:var(--teal); margin-bottom:14px;}
+  .card .icon{font-family:var(--body); font-size:12px; color:var(--teal); margin-bottom:14px;}
   .card h3{font-size:16px; font-weight:600; margin-bottom:8px;}
   .card p{font-size:14px; color:var(--ink-soft);}
 
@@ -133,7 +133,7 @@
   .step{display:flex; gap:20px; padding:22px 0; border-top:1px solid var(--line);}
   .step:first-child{border-top:none;}
   .step .num{
-    font-family:var(--mono); font-size:13px; color:var(--teal); flex:none; width:34px; padding-top:2px;
+    font-family:var(--body); font-size:13px; color:var(--teal); flex:none; width:34px; padding-top:2px;
   }
   .step h3{font-size:16.5px; font-weight:600; margin-bottom:6px;}
   .step p{font-size:14px; color:var(--ink-soft); max-width:520px;}
@@ -142,7 +142,7 @@
   .plist{display:flex; flex-direction:column; gap:1px; background:var(--line); border:1px solid var(--line); border-radius:var(--radius-m); overflow:hidden;}
   .pitem{background:#fff; padding:22px 26px; display:flex; gap:18px; align-items:center; justify-content:space-between; flex-wrap:wrap;}
   .pitem-l{display:flex; gap:16px; align-items:center;}
-  .pitem .tag{font-family:var(--mono); font-size:11px; color:var(--ink-soft); border:1px solid var(--line); border-radius:var(--radius-s); padding:3px 8px; flex:none;}
+  .pitem .tag{font-family:var(--body); font-size:11px; color:var(--ink-soft); border:1px solid var(--line); border-radius:var(--radius-s); padding:3px 8px; flex:none;}
   .pitem h3{font-size:15.5px; font-weight:600;}
   .pitem p{font-size:13.5px; color:var(--ink-soft); margin-top:3px; max-width:440px;}
 
@@ -150,7 +150,7 @@
   .svc-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:14px;}
   @media (max-width:800px){ .svc-grid{grid-template-columns:repeat(2,1fr);} }
   .svc{border:1px solid var(--line); border-radius:var(--radius-m); padding:20px; text-align:center; background:#fff;}
-  .svc .glyph{font-family:var(--mono); font-size:11px; color:var(--teal); margin-bottom:10px;}
+  .svc .glyph{font-family:var(--body); font-size:11px; color:var(--teal); margin-bottom:10px;}
   .svc h3{font-size:14px; font-weight:500;}
 
   /* ---- pricing ---- */
@@ -158,7 +158,7 @@
   @media (max-width:860px){ .price-grid{grid-template-columns:1fr;} }
   .price{border:1px solid var(--line); border-radius:var(--radius-m); padding:30px 26px; background:#fff; display:flex; flex-direction:column;}
   .price.featured{border:2px solid var(--teal); position:relative;}
-  .price .badge{position:absolute; top:-13px; left:26px; background:var(--teal); color:#fff; font-size:11px; font-family:var(--mono); padding:4px 10px; border-radius:999px;}
+  .price .badge{position:absolute; top:-13px; left:26px; background:var(--teal); color:#fff; font-size:11px; font-family:var(--body); padding:4px 10px; border-radius:999px;}
   .price h3{font-size:19px; font-weight:600; margin-bottom:4px;}
   .price .for{font-size:13px; color:var(--ink-soft); margin-bottom:18px;}
   .price ul{list-style:none; margin:0 0 20px; padding:0; display:flex; flex-direction:column; gap:10px;}
@@ -182,7 +182,8 @@
   .final .btn-primary{background:#fff; color:var(--ink);}
   .final .btn-primary:hover{background:#E9E7DF;}
 
-  footer{padding:36px 0; text-align:center; font-size:12.5px; color:var(--ink-soft); font-family:var(--mono);}
+  footer{padding:36px 0; text-align:center; font-size:12.5px; color:var(--ink-soft); font-family:var(--body);}
+  .card .icon,.step .num,.pitem .tag,.svc .glyph,.price .badge{font-weight:500;}
 </style>
 </head>
 <body>
